@@ -24,6 +24,7 @@ type Tchains =
   | "evm:linea"
   | "evm:morph"
   | "evm:flow"
+  | "evm:airdao"
   | "bitcoin";
 
 interface Order {
@@ -145,6 +146,12 @@ export default function Swap() {
     "evm:amoy": {
       imgurl:
         "https://cdn.prod.website-files.com/637e2b6d602973ea0941d482/63e26c8a3f6e812d91a7aa3d_Polygon-New-Logo-p-500.png",
+      chain: "Polygon",
+      asset: "0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D",
+    },
+    "evm:airdao": {
+      imgurl:
+        "https://pbs.twimg.com/profile_images/1745859557958598656/yXgsFfF3_400x400.jpg",
       chain: "Polygon",
       asset: "0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D",
     },

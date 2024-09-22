@@ -9,7 +9,7 @@ import { ExecutorAbi } from "./abi/executor";
 import { Executor } from "./types/Executor";
 import { SERVER_API } from "../../utils/constants";
 import { useAddress, useSwitchChain } from "@thirdweb-dev/react";
-import { Sepolia , PolygonAmoyTestnet , BaseSepoliaTestnet , ScrollSepoliaTestnet , OpSepoliaTestnet, Chain, LineaSepolia , MorphHolesky , HederaTestnet , Testnet } from "@thirdweb-dev/chains";
+import { Sepolia , PolygonAmoyTestnet , BaseSepoliaTestnet , ScrollSepoliaTestnet , OpSepoliaTestnet, Chain, LineaSepolia , MorphHolesky , HederaTestnet , Testnet , AirdaoTestnet } from "@thirdweb-dev/chains";
 
 const vaultAddressMap : Record<string, string> = {
   'sepolia': '0xAe5a73661222DdC593CC987C186801B45072014b', // Token : 0xa0907fA317E90d6cE330d28565E040f0474E932E
@@ -21,6 +21,7 @@ const vaultAddressMap : Record<string, string> = {
   'flow' : '0xDeb4C7AB99e46aFEbfE374F6a7BBFB63D309166f', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D   
   'morph' : '0xDeb4C7AB99e46aFEbfE374F6a7BBFB63D309166f', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D   
   'linea' : '0xDeb4C7AB99e46aFEbfE374F6a7BBFB63D309166f', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D   
+  'airdao' : '0xDeb4C7AB99e46aFEbfE374F6a7BBFB63D309166f', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D   
 }
 
 const tokenAddressMap : Record<string, string> = {
@@ -33,6 +34,7 @@ const tokenAddressMap : Record<string, string> = {
   'flow' : '0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D
   'morph' : '0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D
   'linea' : '0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D
+  'airdao' : '0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D', // Token : 0xdbfa6D8aC5e5d684E4Fe6B0830242D8A716E748D
 }
 
 // const rpcMap : Record<string, string> = {
@@ -198,6 +200,7 @@ const TransactionLoader: React.FC<TransactionLoaderProps> = ({
     "evm:morph" : MorphHolesky,
     "evm:flow" : Testnet,
     "evm:hedera" : HederaTestnet,
+    "evm:airdao" : AirdaoTestnet,
   };
 
   const complete_ethereum_side_swap = async (

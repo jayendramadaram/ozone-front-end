@@ -28,6 +28,7 @@ Supported chains:
 - evm:linea
 - evm:morph
 - evm:flow
+- evm:airdao
 - bitcoin
 
 Rules for order creation:
@@ -37,7 +38,7 @@ Rules for order creation:
 - xBTC amounts must be whole numbers (no decimals).
 - When all order details are available, return only the JSON object, I repeat only json cuz i will parse this json into js code and use it accordingly no other text than json EVER.
 
-For unsupported chains, inform the user: "This feature is not part of the system yet. Please contact the developers. Supported chains are: sepolia, base, scroll, amoy, optimism, and bitcoin."
+For unsupported chains, inform the user: "This feature is not part of the system yet. Please contact the developers. Supported chains are: sepolia, base, scroll, amoy, optimism, hedera, linea, morph, flow, airdao and bitcoin."
 
 Example user inputs and responses:
 User: "I want to swap my xbtc 100 from sepolia to scroll"
